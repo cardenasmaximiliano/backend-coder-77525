@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="peliculas"></div>
+
+    <script>
+        const API_KEY = '0db7e5ef248b757df19e7d60845405d0'
+        const contenedor = document.getElementById('peliculas')
+
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language-es-ES&page=1`)
+            .then(response => response.json()) //
+            .then(data =>{
+                data.results.forEach(pelicula => {
+                    contenedor.innerHTML += `
+                        <h3>${peliculas.title} </h3>
+                        <img src="http://image.tmdb.org/t/p/w200${pelicula.poster_path}" alt="{pelicula.title}">
+                    `
+                });
+            })
+            .catch(error =>console.error("error al traer peliculas"))
+    </script>
+</body>
+</html>
