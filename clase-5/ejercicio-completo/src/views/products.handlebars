@@ -1,0 +1,19 @@
+<h2>Agregar Producto</h2>
+<form action="/products" method="POST" enctype="multipart/form-data">
+  <input type="text" name="nombre" placeholder="Nombre" required>
+  <input type="number" name="precio" placeholder="Precio" required>
+  <input type="file" name="imagen">
+  <button type="submit">Guardar</button>
+</form>
+
+<h2>Listado de productos</h2>
+<ul>
+  {{#each productos}}
+    <li>
+      {{this.nombre}} - ${{this.precio}}
+      {{#if this.imagen}}
+       <img src="{{this.imagen}}" alt="{{this.nombre}}" width="100">
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

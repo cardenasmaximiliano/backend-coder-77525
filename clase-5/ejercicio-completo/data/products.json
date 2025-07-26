@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "postman soft",
+    "precio": "1231",
+    "imagen": "/uploads/1753552170280.png",
+    "id": 1
+  },
+  {
+    "nombre": "ada",
+    "precio": "123",
+    "imagen": "/uploads/1753552259757.png",
+    "id": 2
+  },
+  {
+    "nombre": "maxi",
+    "precio": "145",
+    "imagen": "/uploads/1753552393182.png",
+    "id": 3
+  }
+]
